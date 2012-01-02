@@ -1,0 +1,6 @@
+/bin/
+/obj/
+/*.invoice.csproj.user
+/*.csproj.user
+/log*.txt
+/log.txt*

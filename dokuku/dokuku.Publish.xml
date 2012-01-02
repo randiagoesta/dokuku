@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\upload" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="12/31/2011 18:42:29" />
+    <file relUrl="log4net.config" publishTime="12/31/2011 16:37:18" />
+    <file relUrl="bin/Newtonsoft.Json.dll" publishTime="12/28/2011 11:15:25" />
+    <file relUrl="bin/Newtonsoft.Json.pdb" publishTime="12/28/2011 11:15:25" />
+    <file relUrl="bin/Common.Logging.Log4Net.dll" publishTime="12/31/2011 15:40:04" />
+    <file relUrl="packages.config" publishTime="12/31/2011 16:32:14" />
+    <file relUrl="bin/log4net.dll" publishTime="11/24/2009 11:04:31" />
+    <file relUrl="bin/Dokuku.Invoice.pdb" publishTime="12/31/2011 18:24:49" />
+    <file relUrl="bin/Newtonsoft.Json.xml" publishTime="12/28/2011 11:15:25" />
+    <file relUrl="Scripts/jquery-ui-1.8.16.js" publishTime="12/30/2011 10:01:15" />
+    <file relUrl="bin/System.Web.Razor.dll" publishTime="12/27/2011 16:23:26" />
+    <file relUrl="bin/Nancy.Hosting.Aspnet.dll" publishTime="12/27/2011 10:57:55" />
+    <file relUrl="bin/Nancy.Authentication.Forms.dll" publishTime="12/27/2011 16:22:50" />
+    <file relUrl="bin/LoveSeat.Interfaces.dll" publishTime="12/28/2011 01:23:24" />
+    <file relUrl="bin/Common.Logging.dll" publishTime="12/31/2011 15:39:06" />
+    <file relUrl="Views/index.cshtml" publishTime="12/31/2011 15:15:31" />
+    <file relUrl="bin/Nancy.ViewEngines.Razor.dll" publishTime="12/27/2011 16:23:26" />
+    <file relUrl="bin/LoveSeat.dll" publishTime="12/28/2011 01:23:24" />
+    <file relUrl="bin/Dokuku.Invoice.dll" publishTime="12/31/2011 18:24:49" />
+    <file relUrl="Scripts/jquery-ui-1.8.16.min.js" publishTime="12/30/2011 10:01:15" />
+    <file relUrl="Scripts/login.js" publishTime="12/31/2011 09:58:44" />
+    <file relUrl="Scripts/jquery-1.7.1-vsdoc.js" publishTime="12/30/2011 10:01:15" />
+    <file relUrl="Scripts/jquery-1.7.1.js" publishTime="12/30/2011 10:01:15" />
+    <file relUrl="Scripts/jquery-1.7.1.min.js" publishTime="12/30/2011 10:01:15" />
+    <file relUrl="bin/Nancy.dll" publishTime="12/27/2011 10:57:55" />
+    <file relUrl="Views/login.cshtml" publishTime="12/31/2011 15:13:04" />
+  </publishProfile>
+</publishData>
