@@ -21,7 +21,7 @@ namespace FirstNancyApp.Modules
             Get["/Styles/{file}"] = p =>
             {
                 string filename = p.file.ToString();
-                return Response.AsJs("Styles/" + filename);
+                return Response.AsCss("Styles/" + filename);
             };
 
             Get["/login"] = p =>
