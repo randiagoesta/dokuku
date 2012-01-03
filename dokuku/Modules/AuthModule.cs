@@ -18,6 +18,12 @@ namespace FirstNancyApp.Modules
                 return Response.AsJs("Scripts/" + filename);
             };
 
+            Get["/Styles/{file}"] = p =>
+            {
+                string filename = p.file.ToString();
+                return Response.AsJs("Styles/" + filename);
+            };
+
             Get["/login"] = p =>
             {
                 return View["login"];
