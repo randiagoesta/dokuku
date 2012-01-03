@@ -39,7 +39,7 @@ namespace FirstNancyApp.Modules
                 }
 
                 return this.LoginAndRedirect(userGuid.Value, expiry);
-            }; 
+            };
 
             Get["/logout"] = x =>
             {

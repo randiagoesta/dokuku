@@ -48,6 +48,19 @@
 
             FormsAuthentication.Enable(pipelines, formsAuthConfiguration);
             Jsonp.Enable(pipelines);
+            pipelines.AfterRequest.AddItemToEndOfPipeline(SetCookieDomain);
+        }
+
+        private void SetCookieDomain(Nancy.NancyContext ctx)
+        {
+            string domainName = System.Configuration.ConfigurationManager.AppSettings["Domain"];
+            if (domainName == null || domainName.Trim() == string.Empty)
+                return;
+
+            foreach (Nancy.Cookies.INancyCookie cookie in ctx.Response.Cookies)
+            {
+                cookie.Domain = System.Configuration.ConfigurationManager.AppSettings["Domain"];
+            }
         }
     }
 }
