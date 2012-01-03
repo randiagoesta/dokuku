@@ -59,7 +59,7 @@
 
             foreach (Nancy.Cookies.INancyCookie cookie in ctx.Response.Cookies)
             {
-                cookie.Domain = System.Configuration.ConfigurationManager.AppSettings["Domain"];
+                cookie.Domain = domainName;
             }
         }
     }
