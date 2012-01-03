@@ -7,7 +7,7 @@
         var message,ErrorMessage;
         message = $.extend(defaults, $.getUrlVars());
         if(message.error == 'true')
-            ErrorMessage = "Username atau Password Salah";
+            ErrorMessage = "Email atau Kata Sandi Salah";
         $(this).text(ErrorMessage);
     }
 };$.fn.ErrorMessage = ErrorMessage.value;

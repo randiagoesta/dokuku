@@ -1,0 +1,50 @@
+/*****************/
+/** Capcha CSS **/
+/*****************/
+.Capcha {
+	padding:10px;
+	border:1px solid #F4F4F4;
+	background:White;
+	margin-top:10px;
+}
+.Capcha .clr{clear:both}
+
+.Capcha #bgSlider {
+	width:202px;
+	height:22px;
+	background:transparent url('/Contents/images/signup/sprites.png') no-repeat 0 -22px;
+	float:left
+}
+
+.Capcha #Slider {
+	width:48px;
+	height:22px;
+	background:transparent url('/Contents/images/signup/sprites.png') no-repeat -32px 0;
+	cursor:e-resize
+}
+
+.Capcha #Icons {
+	float:left;
+	width:16px;
+	height:16px;
+	background:transparent url('/Contents/images/signup/sprites.png') no-repeat 0 0;
+	margin-top:3px;
+	margin-left:10px;
+}
+
+.Capcha #TxtStatus {
+	width:202px;
+	margin-top:7px;
+	text-align:center;
+	font-family:Verdana;
+	font-size:10px;
+	clear:both
+}
+
+/** States **/
+.Capcha .dropSuccess {
+	color:#568E2F
+}
+.Capcha .dropError {
+	color:#bb2828
+}

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/SignUp.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/Capcha.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-ui.js" type="text/javascript"></script>
+    <script src="../Scripts/Capcha.js" type="text/javascript"></script>
+    <script src="../Scripts/signup.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id='header'>
+	    <div class="container">
+		    <ul class="top-nav">
+			    <li class="signup">
+				    <a href="javascript://">Mendaftar</a>
+			    </li>
+			    <li class="login">
+				    <a href="/login" id='login'>Masuk</a>
+			    </li>
+		    </ul>
+	    </div>
+    </div>
+    <div id="section">
+	    <div id='body' class="container">
+		    <div id='signupdiv' class='mainbodydiv'>
+	            <div class='titlebg'>
+		            <div class='titlemain'>
+			            <div class='userlogo'>
+				            <img src='/Contents/images/signup/userlogo.png' width='20px;'/>
+			            </div>
+			            <div class='maintitle'>
+				            Mendaftar
+				            <div class='subtitle'>Daftar Kurang dari 20 Detik!</div>
+			            </div>
+		            </div>
+	            </div>
+	            <div class='registerform'>
+		            <form id='register'>
+			            <div class='fieldmain'>
+				            <div class='fieldmaindiv'>
+					            <div class='fieldtitle'>
+						            <span class='floatleft'>Informasi Pribadi</span>
+						            <span class='mandatory'>All fields are mandatory</span>
+					            </div>
+				            </div>
+				            <div class='fieldmaindiv'>
+					            <div class='fieldleft'>Email Anda</div>
+					            <div class='fieldright'>
+						            <input type='email' id='Email' name='Email'/>
+					                <span class="hint">
+                                        Masukkan Email dengan benar. Email ini akan digunakan untuk konfirmasi akun anda dan berguna juga ketika anda kehilangan Kata Sandi
+                                    <span class="hint-pointer">&nbsp;</span></span>
+                                </div>
+				            </div>
+				            <div class='fieldmaindiv'>
+					            <div class='fieldleft'>Kata Sandi</div>
+					            <div class='fieldright'>
+						            <input type='password' id='Password' name='Password'/>
+                                    <span class="hint">
+                                        Gunakan 6-30 karakter, jangan gunakan nama anda atau identitas Dokuku anda. Gunakan kombinasi huruf, angka dan karakter khusus
+                                    <span class="hint-pointer">&nbsp;</span></span>
+					            </div>
+				            </div>
+				            <div class='fieldmaindiv'>
+					            <div class='fieldleft'>Ulang Kata Sandi</div>
+					            <div class='fieldright'>
+						            <input type='password' id='RePassword' name='RePassword'/>
+                                    <span class="hint">
+                                        Kata Sandi harus sama dengan Kata Sandi sebelumnya
+                                    <span class="hint-pointer">&nbsp;</span></span>
+					            </div>
+				            </div>
+			            </div>
+			            <div class='fieldmain'>
+				            <div class='fieldmaindiv'>
+					            <div class='fieldtitle'>
+						            <span class='floatleft'>Verifikasi</span>
+					            </div>
+				            </div>
+				            <div class='fieldmaindiv'>
+					            <div class='fieldleft'>	</div>
+					            <div class='fieldright'>
+						            <div class='Capcha'></div>
+					            </div>
+				            </div>
+
+			            </div>
+			            <div class='fieldmain'>
+				            <div class='fieldmaindiv'>
+					            <div class='fieldtitle'>
+						            <span class='floatleft'>Term of Service</span>
+					            </div>
+				            </div>
+				            <div class='fieldmaindiv'>
+					            <div class='fieldleft'></div>
+					            <div class='fieldright'>
+						            <input type='checkbox' id='Agree' name='Agree' class='agree'/>
+						            <a href='javascript://' class="checkbox-checked"> I agree to the Terms of Service and Privacy Policy</a>
+					            </div>
+				            </div>
+				            <div class='fieldmaindiv'>
+					            <div class='fieldleft'></div>
+					            <div class='fieldright'>
+						            <input type='submit' value='Sign Up Now'/>
+					            </div>
+				            </div>
+			            </div>
+		            </form>
+	            </div>
+            </div>
+	    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+﻿div.mainbodydiv{
+	width: 70%;
+	float: left;
+	border: #BED5E6 solid 1px;
+	padding: 0px 0px 13px 0px;
+	margin: 0px;
+	border-image: initial;
+}
+div.titlebg{
+	background: -webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EAEAEA));
+	background: -moz-linear-gradient(top,#FAFAFA,#EAEAEA);
+	height: 60px;
+	margin: 0px auto;
+}
+div.titlemain {
+	margin: 0px 10px 10px;
+	height: 30px;
+	padding: 10px 0px 0px 10px;
+	float: left;
+}
+div.userlogo {
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+div.userlogo img {
+	height: 47px;
+	width: 37px;
+	border: none;
+	border-image: initial;
+}
+div.maintitle {
+	float: left;
+	font-size: 22px;
+	color: #0054A6;
+	font-weight: bold;
+	padding: 0px 0px 0px 0px;
+	margin: 2px 0px 0px 10px;
+}
+div.subtitle {
+	font-size: 11px;
+	text-decoration: none;
+	color: black;
+	padding: 0px;
+	font-weight: normal;
+}
+
+
+
+div.registerform {
+	float: left;
+	padding: 0px 0px 0px 10px;
+	width: 100%;
+}
+div.fieldmain {
+	width: 100%;
+	padding: 0px;
+}
+div.fieldmaindiv {
+	width: 100%;
+	float: left;
+	padding: 0px;
+	margin-top: 10px;
+}
+div.fieldtitle {
+	width: 94%;
+	float: left;
+	border-bottom: #DBDBDB 1px solid;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	color: #0054A6;
+	margin: 3px 0px 0px 15px;
+	padding-bottom: 3px;
+}
+.floatleft {
+	float: left;
+}
+.mandatory {
+	border: 1px solid #E6EACD;
+	background-color: #FFFFE6;
+	font-size: 11px;
+	padding: 0px;
+	float: right;
+	margin: 1px 1px 0px 0px;
+	font-weight: normal;
+	color: black;
+	border-image: initial;
+}
+
+div.fieldleft {
+	width: 25%;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	color: #454545;
+	padding: 3px 5px 0px 0px;
+}
+div.fieldright {
+	float: left;
+	font-size: 11px;
+	text-decoration: none;
+	color: #837D83;
+}
+input[type="email"] ,input[type="password"] {
+	font-size: 12px;
+	border: 1px solid #DFDFDF;
+	border: 1px solid #838983;
+	width: 192px;
+	padding: 1px 3px 5px 3px;
+	_height: 22px;
+	border-image: initial;
+}
+input[type="email"]:focus, input[type="password"]:focus
+{
+    background-color:#ffc;
+}
+.agree {
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+.fieldright a {
+	color: #0202EF;
+	padding: 0px 0px 0px 3px;
+	text-decoration: none;
+}
+/* The hint to Hide and Show */
+.hint {
+   	display: none;
+    position: absolute;
+    width: 200px;
+    margin-left: 220px;
+    margin-top: -30px;
+    border: 1px solid #c93;
+    padding: 10px 12px;
+    /* to fix IE6, I can't just declare a background-color,
+    I must do a bg image, too!  So I'm duplicating the pointer.gif
+    image, and positioning it so that it doesn't show up
+    within the box */
+    background: #ffc url(/Contents/images/signup/pointerballoon.gif) no-repeat -10px 5px;
+}
+
+/* The pointer image is hadded by using another span */
+.hint .hint-pointer {
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 10px;
+    height: 19px;
+    background: url(/Contents/images/signup/pointerballoon.gif) left top no-repeat;
+}

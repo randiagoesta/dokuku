@@ -21,7 +21,12 @@ namespace FirstNancyApp.Modules
             Get["/Styles/{file}"] = p =>
             {
                 string filename = p.file.ToString();
-                return Response.AsJs("Styles/" + filename);
+                return Response.AsCss("Styles/" + filename);
+            };
+
+            Get["/Contents/images/{name}"] = x =>
+            {
+                return Response.AsImage(string.Format("Contents/images/{0}", (string)x.name));
             };
 
             Get["/login"] = p =>
@@ -45,7 +50,12 @@ namespace FirstNancyApp.Modules
                 }
 
                 return this.LoginAndRedirect(userGuid.Value, expiry);
-            }; 
+            };
+
+            Get["/signup"] = p =>
+            {
+                return View["signup"];
+            };
 
             Get["/logout"] = x =>
             {
