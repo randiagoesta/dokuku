@@ -1,0 +1,5 @@
+E:\Bonastoco\Dokuku\Dokuku\dokuku.fixture\bin\Debug\dokuku.fixture.dll
+E:\Bonastoco\Dokuku\Dokuku\dokuku.fixture\bin\Debug\dokuku.fixture.pdb
+E:\Bonastoco\Dokuku\Dokuku\dokuku.fixture\obj\Debug\ResolveAssemblyReference.cache
+E:\Bonastoco\Dokuku\Dokuku\dokuku.fixture\obj\Debug\dokuku.fixture.dll
+E:\Bonastoco\Dokuku\Dokuku\dokuku.fixture\obj\Debug\dokuku.fixture.pdb

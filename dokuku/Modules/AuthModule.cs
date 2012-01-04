@@ -52,9 +52,38 @@ namespace FirstNancyApp.Modules
                 return this.LoginAndRedirect(userGuid.Value, expiry);
             };
 
+            Post["/signup"] = x =>
+            {
+                try
+                {
+                    var userGuid = AuthRepository.SignUp((string)this.Request.Form.Username, (string)this.Request.Form.Password);
+                    return this.LoginAndRedirect(userGuid.Value, null, "~/");
+                }
+                catch (Exception ex)
+                {
+                    return Context.GetRedirect("~/signup?error=true&message=" + ex.Message);
+                }
+            };
+
             Get["/signup"] = p =>
             {
                 return View["signup"];
+            };
+
+            Get["/signup/validate/{username}"] = p =>
+            {
+                try
+                {
+                    var user = AuthRepository.GetUserFromUsername(p.username);
+                    if (user != null)
+                        return Response.AsJson(new {Registered = true, Error = false });
+                    else
+                        return Response.AsJson(new { Registered = false, Error = false });                   
+                }
+                catch (Exception ex)
+                {
+                    return Response.AsJson(new { Message = ex.Message, Error = true });
+                }
             };
 
             Get["/logout"] = x =>

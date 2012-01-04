@@ -74,3 +74,8 @@ input[type="submit"] {
 	-webkit-font-smoothing: subpixel-antialiased!important;
 	border-image: initial;
 }
+#error
+{
+    color : Red;
+    font-size:13px;
+}

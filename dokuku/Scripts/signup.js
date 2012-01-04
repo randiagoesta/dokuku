@@ -1,51 +1,81 @@
 ﻿$(document).ready(function () {
     $('.Capcha').QapTcha({ disabledSubmit: true, autoRevert: true });
     addLoadEvent(prepareInputsForHints);
+    $("input#Username").blur(ValidateEmail);
+    $.fn.GetErrorMessage = ErrorMessage.getByUrl;
+    $.fn.ErrorMessage = ErrorMessage.get;
+    $("#error").GetErrorMessage();
+    $("#register").submit(Validate);
+    $("#register").keypress(ClearErrorMessage);
 });
 
-Validation = {
-    validate: function () {
-        
+function ValidateEmail() {
+    var username = $(this).val();
+    $.ajax({
+        type: 'GET',
+        url: '/signup/validate/' + username,
+        async: false,
+        dataType: 'json',
+        success: ValidateEmailCallBack
+    });
+}
+function ValidateEmailCallBack(data) {
+    if (data.Error != true) {
+        if (data.Registered) {
+            $(".validateEmail").remove();
+            $('<div>', { 'class': 'validateEmail', text: 'Sudah Terdaftar' }).insertAfter('#Username');
+        }
+        else {
+            $(".validateEmail").remove();
+        }
+    }
+    else {
+        $("#error").ErrorMessage({ message: data.Message, error: false });
+    }
+}
+function Validate(e) {
+    var  
+        form = $('form#register'),
+        username = $('input#Username').val(),
+        password = $('input#Password').val(),
+        rePassword = $('input#RePassword').val(),
+        agree = $("#Agree").attr('checked');
+    if (password !== rePassword)
+    {
+        e.preventDefault();
+        $("#error").ErrorMessage({ message: 'Kata Sandi yang dimasukkan tidak cocok', error: false });
+        return;
+    }
+    if(agree == undefined) {
+        e.preventDefault();
+        $("#error").ErrorMessage({ message: 'Anda belum mensetujui persyaratan untuk mendaftar ke Dokuku', error: false });
+        return;
+    }
+    form.submit();
+}
+
+ErrorMessage = {
+    getByUrl: function () {
+        var defaults = {
+            error: false,
+            message: ''
+        };
+        var _message, ErrorMessage;
+        _message = $.extend(defaults, $.getUrlVars());
+        if (_message.error == 'true') {
+            $(this).text(getParameterByName('message'));
+        }
+    },
+    get: function (options) {
+        var defaults = {
+            message: ''
+        };
+        var _message, ErrorMessage;
+        _message = $.extend(defaults, options);
+        $(this).text(_message.message);
     }
 };
 
-function addLoadEvent(func) {
-    var oldonload = window.onload;
-    if (typeof window.onload != 'function') {
-        window.onload = func;
-    } else {
-        window.onload = function () {
-            oldonload();
-            func();
-        }
-    }
-}
-
-function prepareInputsForHints() {
-    var inputs = document.getElementsByTagName("input");
-    for (var i = 0; i < inputs.length; i++) {
-        // test to see if the hint span exists first
-        if (inputs[i].parentNode.getElementsByTagName("span")[0]) {
-            // the span exists!  on focus, show the hint
-            inputs[i].onfocus = function () {
-                this.parentNode.getElementsByTagName("span")[0].style.display = "inline";
-            }
-            // when the cursor moves away from the field, hide the hint
-            inputs[i].onblur = function () {
-                this.parentNode.getElementsByTagName("span")[0].style.display = "none";
-            }
-        }
-    }
-    // repeat the same tests as above for selects
-    var selects = document.getElementsByTagName("select");
-    for (var k = 0; k < selects.length; k++) {
-        if (selects[k].parentNode.getElementsByTagName("span")[0]) {
-            selects[k].onfocus = function () {
-                this.parentNode.getElementsByTagName("span")[0].style.display = "inline";
-            }
-            selects[k].onblur = function () {
-                this.parentNode.getElementsByTagName("span")[0].style.display = "none";
-            }
-        }
-    }
+function ClearErrorMessage() {
+    $("#error").empty();
 }

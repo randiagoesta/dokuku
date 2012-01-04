@@ -90,6 +90,7 @@
     <Content Include="Contents\images\signup\pointerballoon.gif" />
     <Content Include="Contents\images\signup\sprites.png" />
     <Content Include="Contents\images\signup\userlogo.png" />
+    <Content Include="Scripts\BalloonTips.js" />
     <Content Include="Scripts\GetParameter.js" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />

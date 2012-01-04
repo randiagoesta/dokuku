@@ -10,8 +10,9 @@
             ErrorMessage = "Email atau Kata Sandi Salah";
         $(this).text(ErrorMessage);
     }
-};$.fn.ErrorMessage = ErrorMessage.value;
+};
+$.fn.GetErrorMessage = ErrorMessage.value;
 
 $(document).ready(function () {
-    $("#error").ErrorMessage();
+    $("#error").GetErrorMessage();
 });

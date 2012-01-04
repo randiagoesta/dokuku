@@ -32,6 +32,17 @@
                        : new UserIdentity { UserName = userRecord.Email, Claims = userRecord.Roles };
         }
 
+        public static IUserIdentity GetUserFromUsername(string username)
+        {
+            CouchDatabase db = couchClient.GetDatabase("dokuku");
+            ViewResult<Account> users = db.View<Account>("all_accounts", "view_accounts");
+            var userRecord = users.Items.Where(acc => acc.Email == username).FirstOrDefault();
+
+            return userRecord == null
+                       ? null
+                       : new UserIdentity { UserName = userRecord.Email, Claims = userRecord.Roles };
+        }
+
         public static Guid? ValidateUser(string email, string password)
         {
             CouchDatabase db = couchClient.GetDatabase("dokuku");
@@ -56,6 +67,7 @@
 
             Document<Account> account = new Document<Account>(new Account
             {
+                _id = Guid.NewGuid(),
                 Email = email,
                 Password = password,
                 Roles = new string[2] { OWNER_ROLE, ADMIN_ROLE },

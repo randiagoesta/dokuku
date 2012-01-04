@@ -125,6 +125,10 @@ input[type="email"]:focus, input[type="password"]:focus
 	padding: 0px 0px 0px 3px;
 	text-decoration: none;
 }
+.validateEmail
+{
+    background-color:Yellow;
+}
 /* The hint to Hide and Show */
 .hint {
    	display: none;
